@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Migration Visualization</title>
+	<meta charset="utf-8">
+
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--<script src="libs/d3.v4.min.js"></script>-->
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="libs/d3-scale-chromatic.v0.3.min.js"></script>
+
+	<script src="libs/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="libs/jquery-ui.css">
+	<script src="libs/jquery-ui.js"></script>
+
+	<script src="libs/lodash.js"></script>
+	<script src="libs/jquery.sparkline.min.js"></script>
+	<script src="libs/jLouvain.js"></script>
+
+	<link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap-tokenfield.min.css">
+	<script src="libs/bootstrap-tokenfield.min.js"></script>
+
+	<link rel="stylesheet" href="libs/leaflet.css"/>
+	<link rel="stylesheet" href="libs/Leaflet.markercluster-1.4.1/dist/MarkerCluster.Default.css"/>
+
+	<script src="libs/leaflet.js"></script>
+	<script src="libs/Leaflet.markercluster-1.4.1/dist/leaflet.markercluster.js"></script>
+	<script src="libs/Leaflet.SvgShapeMarkers-gh-pages/dist/leaflet-svg-shape-markers.min.js"></script>
+
+	<script src="libs/jsnetworkx.js"></script>
+
+	<script src="libs/d3-annotation.min.js"></script>
+
+	<script src="libs/d3-horizon-chart.js"></script>
+
+	<link href="https://unpkg.com/tabulator-tables@4.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.7/dist/js/tabulator.min.js"></script>
+
+	<script type="text/javascript" src="libs/d3-legend.min.js"></script>
+
+	<script src="libs/d3-force-sampled.js"></script>
+	
+	<link href="https://unpkg.com/lineupjs/build/LineUpJS.css" rel="stylesheet">
+	<script src="https://unpkg.com/lineupjs/build/LineUpJS.js"></script>
+
+	<script src="https://d3js.org/d3-array.v1.min.js"></script>
+	<script src="https://d3js.org/d3-path.v1.min.js"></script>
+	<script src="https://unpkg.com/d3-chord@2.0.0-rc.9/dist/d3-chord.min.js"></script>
+	<!--<script src="https://unpkg.com/browse/d3-chord@2.0.0-rc.9/"></script>
+	<script src="https://unpkg.com/browse/d3-chord@2.0.0-rc.9/src/ribbon.js"></script> -->
+	<script src="https://d3js.org/d3-queue.v3.min.js"></script>
+
+	<link rel="stylesheet" href="style/layout.css">
+
+</head>
+
+<body>
+
+	<div class="container-fluid" id="main-container">
+		
+		<div class="row" id="map-outer-container">
+
+			<div class="col-12 justify-content-center">
+				<div id="map-container"></div>
+			</div>
+
+        </div>
+
+        <div class="row" id="stats-container">
+			<div class="col-sm-5 col-md-5 col-lg-5" id="lineUpContainer">
+
+                <div id="lineUpTable"></div>        
+
+            </div>
+
+            <div class="col-sm-3 col-md-3 col-lg-3" id="netContainer">
+
+            	<!-- <h6><span class="badge badge-secondary" id="cName"></span></h6> -->
+                <svg id="netSVG"></svg>
+
+			</div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4" id="MigDistContainer">
+
+                <div id="migDistTable"></div>        
+
+            </div>
+
+        </div>
+
+	</div>
+
+	<script src="js/constants.js"></script>
+	<script src="js/utils.js"></script> 
+	<!-- <script src="js/net.js"></script> -->
+	<script src="js/map.js"></script>
+	<script src="js/lineup.js"></script>
+	<script src="js/chord.js"></script>
+
+</body>
+
+</html>
